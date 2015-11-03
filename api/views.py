@@ -23,6 +23,6 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 
 class RestaurantViewSet(viewsets.ModelViewSet):
-#    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
