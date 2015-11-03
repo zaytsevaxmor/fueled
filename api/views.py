@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.contrib.auth.models import User, Group
-from api.models import Restaurant
-from api.serializers import UserSerializer, GroupSerializer, RestaurantSerializer
+from api.models import Restaurant, Review
+from api.serializers import UserSerializer, GroupSerializer, RestaurantSerializer, ReviewSerializer
 from rest_framework import permissions, viewsets
 from oauth2_provider.ext.rest_framework import TokenHasReadWriteScope, TokenHasScope
 
@@ -26,3 +26,8 @@ class RestaurantViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
+
+class ReviewViewSet(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
