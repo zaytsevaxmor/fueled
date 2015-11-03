@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, patterns, include
 from rest_framework import routers
-from api.views import UserViewSet, GroupViewSet, RestaurantViewSet, ReviewViewSet
+from api.views import UserViewSet, GroupViewSet, RestaurantViewSet, ReviewViewSet, TrackViewSet
 from django.contrib import admin
 admin.autodiscover()
 
@@ -26,6 +26,7 @@ router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
 router.register(r'restaurants', RestaurantViewSet)
 router.register(r'reviews', ReviewViewSet)
+router.register(r'tracks', TrackViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
