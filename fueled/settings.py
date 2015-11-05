@@ -139,3 +139,16 @@ OAUTH2_PROVIDER = {
     # this is the list of available scopes
     'SCOPES': {'read': 'Read scope', 'write': 'Write scope'}
 }
+
+TEST_PARAMS = {
+    'HOST': 'vm-swd-prj.axmor.nsk:8000',
+    'TOKEN': {
+        'GRANT_TYPE': 'password',
+        'USERNAME': 'spirin',
+        'PASSWORD': '123qwe'
+    },
+    'CLIENT': {
+        'ID': 'cUFJCw6SIeBg5KF5f89NJfEtd3mqfhOcnf8IZ0r2',
+        'SECRET': 'cwL3fjAOhQl42N8oFlkHhLwz9pIUSSiKh2misf7vzyghbsSEzy4fcSf2COD5HmbWfwf1sHQXm0KUqClCOKWj0r1beWx0malKUAnALIDVNsn61gfYEPe4l713FnKXe7OH'
+    }
+}
