@@ -17,8 +17,14 @@ class Review(models.Model):
     creator = models.ForeignKey(User)
     restaurant = models.ForeignKey(Restaurant)
 
+    def __str__(self):
+        return "%s" % (self.text)
+
 
 class Track(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     creator = models.ForeignKey(User)
     restaurant = models.ForeignKey(Restaurant)
+
+    def __str__(self):
+        return "Track %s" % (self.created_at)
